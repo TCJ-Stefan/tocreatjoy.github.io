@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Knowledge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #232f3e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .login-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .login-container button {
+            width: 80%;
+            padding: 10px;
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 250px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card p {
+            padding: 10px;
+        }
+        .card a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Amazon Knowledge</h1>
+    </div>
+    <div class="login-container">
+        <h2>登录</h2>
+        <input type="text" placeholder="用户名" id="username">
+        <input type="password" placeholder="密码" id="password">
+        <button onclick="login()">登录</button>
+    </div>
+    <div class="content">
+        <div class="card">
+            <a href="https://www.notion.so/tocreatjoy/489115451b174b9fbbb945efbd608c28">
+                <img src="./images/image1.jpg" alt="基本知识">
+                <p>基本知识</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page2.html">
+                <img src="./images/image2.jpg" alt="广告结构">
+                <p>广告结构</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page3.html">
+                <img src="./images/image3.jpg" alt="工具库">
+                <p>工具库</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page4.html">
+                <img src="./images/image4.jpg" alt="学习视频">
+                <p>学习视频</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page5.html">
+                <img src="./images/image5.jpg" alt="AI广告咨询">
+                <p>AI广告咨询</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page6.html">
+                <img src="./images/image6.jpg" alt="广告策略">
+                <p>广告策略</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://example.com/page7.html">
+                <img src="./images/image7.jpg" alt="数据库搭建">
+                <p>数据库搭建</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username === 'user' && password === 'password') {
+                document.querySelector('.login-container').style.display = 'none';
+                document.querySelector('.content').style.display = 'flex';
+            } else {
+                alert('用户名或密码错误');
+            }
+        }
+        document.querySelector('.content').style.display = 'none';
+    </script>
+</body>
+</html>
